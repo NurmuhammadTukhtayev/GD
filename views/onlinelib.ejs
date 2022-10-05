@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Go Digital Online Course</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  <meta name="description" content="Create a stylish landing page for your business startup and get leads for the offered services with this HTML landing page template.">
+  <meta name="author" content="Inovatik">
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta property="og:type" content="article" />
+  <!-- Favicons -->
+  <link href="All/img/favicon.png" rel="icon">
+  <link href="All/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="All/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="All/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="All/lib/animate/animate.min.css" rel="stylesheet">
+  <link href="All/lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="All/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="All/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="All/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: NewBiz
+    Theme URL: https://bootstrapmade.com/newbiz-bootstrap-business-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+</head>
+<body>
+<header id="header" class="fixed-top">
+  <div class="container">
+
+    <div class="logo float-left">
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <h1 class="text-light"><a href="#header"><span>NewBiz</span></a></h1> -->
+      <a href="#intro" class="scrollto"><h2>Go Digital</h2></a>
+    </div>
+
+    <nav class="main-nav float-right d-none d-lg-block">
+      <ul>
+        <li class="active"><a href="/#intro">Главная</a></li>
+        <li><a href="/#about">О проекте</a></li>
+        <li><a href="/#services">Курсы</a></li>
+        <li><a href="/library">Онлайн-библиотека</a></li>
+        <!-- <li><a href="/#team"></a></li> -->
+        <li><a href="/login">Вход</a></li>
+        <li><a href="/apply">Регистрация</a></li>
+        
+
+<li><a href="/news">Новости</a></li>  
+<li><a href="/change?lang=uz">UZ</a></li>
+<li><a href="/change?lang=ru">RU</a></li>     
+ <!-- <li><a href="/apply">Иконки социальных сетей</a></li> -->
+    </nav><!-- .main-nav -->  
+  </div>
+</header><!-- #header -->
+  
+    <!--==========================
+      Team Section
+    ============================-->
+    <br><br><br>
+    <section id="team">
+      <div class="container">
+        <div class="section-header">
+          <h3>Онлайн-библиотека </h3>
+          <p>Онлайн-библиотека открывает доступ к электронным ресурсам о цифровой грамотности, которые помогут еще больше расширить ваши знания в онлайн-среде</p>
+        </div>
+
+        <div class="row" id="boook" >
+          
+        </div>
+      </div>
+    </section>
+<script>
+  data=<%- JSON.stringify(libraryFiles) %>
+  image=<%- JSON.stringify(images) %>
+  console.log(data);
+  console.log(image);
+  z=document.getElementById('boook')
+  for(i=0;i<data.length;i++){
+    z.innerHTML+=`
+    <div style="margin-left: 20px;">
+    <img src="imag/${image[i]}" class="rounded mx-auto d-block" style="width: 250px; height: 250px;" alt="">
+          <center><a href="http://godigital.uz/${data[i]}"><h4>${data[i]}</h4></a></center>
+            `
+  }
+</script>
+    <!--==========================
+      Clients Section
+    ============================-->
+  
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 col-md-12 footer-info">
+            <h3>Godigital</h3>
+            <p>GoDigital - это первый онлайн-проект в Узбекистане о цифровой грамотности, который дает возможность школьникам, студентам, ассистентам и учителям пополнить свой багаж знаний о том, как грамотно и эффективно пользоваться всеми благами интернет-пространства и применять свои умения соответственно в своей образовательной деятельности.
+            <br>
+            <br>
+                           Данный проект был осуществлен при финансовой поддержке Программы грантов фонда выпускников обменных программ Посольства США в Ташкенте. Все мнения, идеи, заключения или рекомендации выраженные здесь принадлежат автору(ам) и не отражают официальную точку зрения правительства США.  
+ 
+            </p>
+          </div>
+          
+         
+         
+          
+            <br>
+            <div class="col-lg-12 col-md-12 footer-info d-flex justify-content-around">
+           
+             <img src="All/img/Bayroq.PNG" width="220" height="100"  alt="">
+              <img  src="All/img/pasos.PNG" width="220" height="100" alt="">
+              </div>
+            <div class="col-lg-12 col-md-12 social-links" style="text-align: center;">
+              <h3>Социальные сети</h3>
+         
+              <a href="https://t.me/godigitaluz" class="telegram"><i class="fa fa-telegram"></i></a>
+              <a href="https://www.facebook.com/GoDigital-Improving-digital-literacy-101914081627713" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://instagram.com/godigital.uz?igshid=17dgoy2z8wd6c" class="instagram"><i class="fa fa-instagram"></i></a>
+            </div>
+          
+          </div>
+
+         
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>Godigital</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!--
+          All the links in the footer should remain intact.
+          You can delete the links only if you purchased the pro version.
+          Licensing information: https://bootstrapmade.com/license/
+          Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=NewBiz
+        -->
+        Designed by <a href="">Mirjakhon</a>
+      </div>
+    </div>
+  </footer><!-- #footer --><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
+
+  <!-- JavaScript Libraries -->
+  <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+  <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
+  <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+  <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+  <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+  <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+  <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
+  <script src="js/scripts.js"></script> <!-- Custom scripts -->
+  <script src="All/lib/jquery/jquery.min.js"></script>
+  <script src="All/lib/jquery/jquery-migrate.min.js"></script>
+  <script src="All/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="All/lib/easing/easing.min.js"></script>
+  <script src="All/lib/mobile-nav/mobile-nav.js"></script>
+  <script src="All/lib/wow/wow.min.js"></script>
+  <script src="All/lib/waypoints/waypoints.min.js"></script>
+  <script src="All/lib/counterup/counterup.min.js"></script>
+  <script src="All/lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="All/lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="All/lib/lightbox/js/lightbox.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="All/contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="All/js/main.js"></script>
+
+</body>
+</html>

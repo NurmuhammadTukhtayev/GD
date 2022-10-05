@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Bootstrap Admin Template : Binary Admin</title>
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+<body>
+    <%- include('nav')%>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Blank Page</h2>
+                        <h5>Welcome Admin, Love to see you back. </h5>
+                    </div>
+                </div>
+                <!-- /. ROW  -->
+                <hr />
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Form Element Examples
+                            </div>
+               
+                        <form role="form" action="/test" method="POST">
+                            <label>Test Lang</label>
+                            <select name="lang" class="form-control" id="">
+                                <option value="uz">uz</option>
+                                <option value="ru">ru</option>
+                            </select>
+                            <label>Test ID</label>
+                            <input class="form-control" name="TestID"/>
+                            <label >TEST Count</label>
+                            <input class="form-control" name="testcount" onkeyup="KEYUP(this.value)"
+                            type="number"/>
+                            <div class="form-group" id="test">
+                            </div>
+                            <button class="btn btn-primary">Submit</button>
+                        </form>
+                        <script>
+                            var test = document.getElementById('test');
+                            var z;
+                            function KEYUP(e) {
+                                z = `  <div class="form-group" id="test">
+                            </div>`;
+                            x=0;
+                                for (i = 0; i < e; i++) {
+                                    z += `<label>Test Quiz ${i+1}</label>
+                                                <input class="form-control" name="Q${i+1}" />
+                                                <label>A</label>
+                                                <input class="form-control" name="T${x=x+1}"/>
+                                                <label>B</label>
+                                                <input class="form-control" name="T${x=x+1}"/>
+                                                <label>C</label>
+                                                <input class="form-control" name="T${x=x+1}"/>
+                                                <label>D</label>
+                                                <input class="form-control" name="T${x=x+1}"/>
+                                                <label>Answer</label>
+                                                <input class="form-control" name="A${i+1}"/>`
+                         }
+test.innerHTML=z
+}                       
+</script>
+                        <!-- /. PAGE WRAPPER  -->
+
+                        <!-- /. WRAPPER  -->
+                        <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+                        <!-- JQUERY SCRIPTS -->
+                        <script src="assets/js/jquery-1.10.2.js"></script>
+                        <!-- BOOTSTRAP SCRIPTS -->
+                        <script src="assets/js/bootstrap.min.js"></script>
+                        <!-- METISMENU SCRIPTS -->
+                        <script src="assets/js/jquery.metisMenu.js"></script>
+                        <!-- CUSTOM SCRIPTS -->
+                        <script src="assets/js/custom.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+ <%- include('navbar2')%>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <br>
+ <div  class="cards-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" >
+                <form action="/checktest/<%= id%>" method="POST">
+                    <h2><%= nomi%> TEST</h2>
+                    <h2> Sizning Eng Yaxshi Natijangiz: <%= natija%></h2>
+                    <div class="form-radio" id="man">
+                    </div>
+                </form>
+                 </div>
+        </div>
+    </div>
+    <br>
+ </div>
+      <script>
+         var quiz = <%- JSON.stringify(quiz)%>
+         var variant=<%- JSON.stringify(variant)%>
+         var k=-1
+          console.log(1);
+          var z=document.getElementById('man')
+          for (i=0;i<quiz.length;i++){
+            z.innerHTML+=`
+            <input class="form-control text-primary"   value="${quiz[i]}" readonly/>
+            <br>
+            `
+            for (j=0;j<4;j++){
+                  k+=1;
+                z.innerHTML+=`
+  <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="radio" aria-label="Checkbox for following text input" value="${(j==0)?'A':(j==1)?'B':(j==2)?'C':(j==3)?'D':'E'}" name="member_level${i}" >
+          </div>
+        </div>
+        <input type="text" class="form-control text-black" aria-label="Text input with checkbox"  value="${variant[k]}"  readonly>
+      </div>
+      `;
+}
+          }
+          z.innerHTML+=`
+          <button type="submit" class="btn btn-primary">
+                        Testni Yakunlash
+                    </button>
+                    <br/>
+                    <br/>
+          <div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+</div>`
+</script>
+</body>
+</html>
